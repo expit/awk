@@ -19,8 +19,13 @@
 
 #1.2
 {$1=""}1
-# Adds leading field separator, does not keep length of field separator #I'm not sure if it's one or 2 lines long
-# Dodaje Field Separator, nie zachowuje dlugosci odstepow miedzy polami
+# Adds leading field separator, does not keep length of field separator
+# Dodaje Field Separator na poczatku, nie zachowuje dlugosci odstepow miedzy polami
+
+#1.2.2
+{$1=""}{print substr($0,2)}
+# Same as above but gets rid of leading space
+# To co powyżej, ale usuwa poczatkowy separator pol (FS).
 
 #1.3
 NF>1 {print (substr($0,index($0,$2)))}
